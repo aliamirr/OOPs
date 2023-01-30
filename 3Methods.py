@@ -89,7 +89,7 @@ class Counter:
         self.locked = False
 
     def toggle_lock(self):
-        self.locked = not self.locked
+        self.locked = not self.locked # we are tooggling the lock.
         #or
         # if self.locked == True:
         #     self.locked = False
@@ -102,13 +102,14 @@ class Counter:
         self.count += 1
 
     def decrement(self):
-        if self.locked:
+        if self.locked: # we are looking at the lock
             raise Exception("The counter is locked!")
         self.count -= 1
 
     def print_count(self):
         print(f"The current count is {self.count}")
-
+    #increment,decrement or print count all of these methods don't return anything, but we could return something from them. most of these are modifying an attribute on this object
+    #these are called instance methods, they all take in self parameters and then they have access to all of these attributes.
 
 
 counter = Counter()
