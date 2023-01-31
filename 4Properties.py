@@ -2,6 +2,12 @@
 # based on some constraints, So u wanna ensure that anything outside cannot modify this attribute
 # or access this attribute inappropriately or incorrectly
 
+# In object oriented programming, getters are used to return the value of attributes while setters are used to set the value of attributes. 
+# Both allow you to hide complexity by providing a single method that can be used to validate data before assigning it to an attribute (setter) or mutate data (e.g. rounding a number) before returning it (getter). 
+# Setters may also constrain an attribute value by only allowing you to set it to something considered valid by the class (e.g. you can't set a negative salary for an employee).
+
+
+
 class Person:
     def __init__(self, name):
         self.name = name
